@@ -1,0 +1,23 @@
+{
+  "name": "toxin-hotel",
+  "version": "1.0.0",
+  "description": "Internship project for MetaLamp",
+  "private": true,
+  "scripts": {
+    "dev": "webpack --mode development"
+  },
+  "keywords": [
+    "webpack",
+    "pug",
+    "scss"
+  ],
+  "author": "Maria Vasilyeva",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
