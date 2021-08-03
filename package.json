@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "webpack --mode development",
-    "watch": "webpack --mode development --watch"
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack serve --mode development --open"
   },
   "keywords": [
     "webpack",
@@ -15,14 +17,24 @@
   "author": "Maria Vasilyeva",
   "license": "ISC",
   "dependencies": {
-    "pug": "^3.0.2"
+    "autoprefixer": "^10.3.1",
+    "normalize.css": "^8.0.1",
+    "pug": "^3.0.2",
+    "sass": "^1.37.2"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "pug-html-loader": "^1.1.5",
+    "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
     "webpack": "^5.47.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }

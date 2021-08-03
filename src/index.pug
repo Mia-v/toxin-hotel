@@ -4,8 +4,51 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Toxin-hotel
+    link(rel="apple-touch-icon" sizes="180x180" href="./favicon-package/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="./favicon-package/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="./favicon-package/favicon-16x16.png")
+    link(rel="manifest" href="./favicon-package/site.webmanifest")
+    link(rel="mask-icon" href="./favicon-package/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#1f2041")
+    meta(name="theme-color" content="#1f2041")
+    title Toxin Hotel
   body
     header
-      img.watermark(src="./styles/watermark.svg", alt="Logo watermark")
-    main
+      img.watermark(src="../src/assets/watermark.svg", alt="Logo watermark")
+    main.main
+      section.colors
+        .colors__block.block
+          .colors__pattern_dark-shade
+          .colors-type__name
+            h2.item-title Dark Shade 100%
+            p.body-text_bigger #1F2041
+        .colors__block.block
+          .colors__pattern_dark-shade75
+          .colors__name
+            h2.item-title Dark Shade 75%
+            p.body-text_bigger #1F2041
+        .colors__block.block
+          .colors__pattern_dark-shade50
+          .colors-type__name
+            h2.item-title Dark Shade 50%
+            p.body-text_bigger #1F2041
+        .colors__block.block
+          .colors__pattern_dark-shade25
+          .colors-type__name
+            h2.item-title Dark Shade 25%
+            p.body-text_bigger #1F2041
+        .colors__block.block
+          .colors__pattern_dark-shade05
+          .colors-type__name
+            h2.item-title Dark Shade 5%
+            p.body-text_bigger #1F2041
+        .colors__block.block
+          .colors__pattern_purple
+          .colors-type__name
+            h2.item-title Purple
+            p.body-text_bigger #BC9CFF
+        .colors__block.block
+          .colors__pattern_green
+          .colors-type__name
+            h2.item-title Green
+            p.body-text_bigger #6FCF97

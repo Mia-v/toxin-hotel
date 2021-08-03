@@ -1,7 +1,139 @@
+@import "fonts";
+@import '~normalize.css';
+
+//colors
+$dark-shade: #1F2041;
+$amount: 0.25;
+$dark-shade75: fade-out($dark-shade, $amount);
+$dark-shade50: fade-out($dark-shade75, $amount);
+$dark-shade25: fade-out($dark-shade50, $amount);
+$dark-shade05: fade-out($dark-shade25, 0.2);
+
+//Primaary color
+$purple: #BC9CFF;
+//Secondary color
+$green: #6FCF97;
+
+@mixin size-and-color($color){
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  background-color: $color;
+}
+@mixin body-text($size){
+  font-size: $size;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  color: $dark-shade25;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  @include body-text(14px);
+
+}
+
 .watermark {
   position: absolute;
   top: 30px;
   left: 30px;
   width: 48px;
   height: 48px;
+}
+
+.main {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  padding: 60px 150px;
+}
+.colors {
+  position: relative;
+  height: 610px;
+  width: auto;
+
+		&__block {
+      position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+		}
+
+		&__pattern {
+      position: relative;
+      width: 50%;
+
+			&_dark-shade {
+        @include size-and-color($dark-shade);
+      }
+      &_dark-shade75 {
+        @include size-and-color($dark-shade75);
+      }
+      &_dark-shade50 {
+        @include size-and-color($dark-shade50);
+      }
+      &_dark-shade25 {
+        @include size-and-color($dark-shade25);
+      }
+      &_dark-shade05 {
+        @include size-and-color($dark-shade05);
+      }
+      &_purple {
+        @include size-and-color($purple);
+      }
+      &_green {
+        @include size-and-color($green);
+      }
+		}
+
+		&__name {
+      display: flex;
+    flex-direction: column;
+    width: 171px;
+    height: 90px;
+    font-size: 19px;
+    line-height: 28px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+		}
+}
+
+.colors-type {
+  width: 436px;
+    height: 321px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+		&__name {
+		}
+}
+.item-title {
+  font-weight: 700;
+  font-size: 19px;
+  color: $dark-shade;
+}
+.body-text {
+  @include body-text(14px);
+  &_bigger {
+    font-size: 19px;
+    color: $dark-shade;
+  }
+
 }
