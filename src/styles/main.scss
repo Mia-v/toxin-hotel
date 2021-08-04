@@ -43,6 +43,20 @@ body {
 
 }
 
+.body-text {
+  @include body-text(14px);
+  &_bigger {
+    font-size: 19px;
+    color: $dark-shade;
+  }
+}
+
+.item-title {
+  font-weight: 700;
+  font-size: 19px;
+  color: $dark-shade;
+}
+
 .watermark {
   position: absolute;
   top: 30px;
@@ -51,16 +65,21 @@ body {
   height: 48px;
 }
 
+// main
+
 .main {
   position: absolute;
   top: 85px;
   left: 0;
   display: inline-flex;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   padding: 60px 150px;
 }
+
+// section colors
+
 .colors {
   position: relative;
   height: 610px;
@@ -68,9 +87,12 @@ body {
 
 		&__block {
       position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 281.26px;
+      height: 90px;
 		}
 
 		&__pattern {
@@ -102,38 +124,13 @@ body {
 
 		&__name {
       display: flex;
-    flex-direction: column;
-    width: 171px;
-    height: 90px;
-    font-size: 19px;
-    line-height: 28px;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px 0;
+      flex-direction: column;
+      width: 171px;
+      height: 90px;
+      font-size: 19px;
+      line-height: 28px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 8px 0;
 		}
-}
-
-.colors-type {
-  width: 436px;
-    height: 321px;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-		&__name {
-		}
-}
-.item-title {
-  font-weight: 700;
-  font-size: 19px;
-  color: $dark-shade;
-}
-.body-text {
-  @include body-text(14px);
-  &_bigger {
-    font-size: 19px;
-    color: $dark-shade;
-  }
-
 }
