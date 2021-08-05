@@ -19,7 +19,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: path.resolve(__dirname, './src/index.pug'),
       favicon: "./assets/favicons/favicon.ico" 
     }),
     new CleanWebpackPlugin(),    
@@ -39,29 +39,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.[html|pug]$/i,
-        use: ['html-loader', 'pug-html-loader'],
-      },
-      {
-        test: /\.css$/, 
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              
-            },
-          },
-          "css-loader",
-        ],
-      },
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true
+        }
+      },     
       {
         test: /\.s[ac]ss$/, 
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              
-            },
+            options: {}
           },
           "css-loader",
           "sass-loader"
